@@ -1,4 +1,13 @@
 # append __str__ __len__ clear isEmpty remove(index)
+class Node:
+    def __init__(self, data = None, next = None, prev = None):
+        self.data = data
+        self.next = next
+        self.prev = prev
+
+    def __str__(self):
+        return str(self.data)
+
 class DummyDoublyCircular:
     def __init__(self):
         self.head = Node()
@@ -146,7 +155,7 @@ def radix_sort(queue):
 
 
 q = Queue()
-for i in input('Enter Input : ').split(', '):
+for i in input('Enter Input : ').split():
     q.enQueue(int(i))
 print(q)
 radix_sort(q)
